@@ -1,292 +1,365 @@
 1
 00:00:00,670 --> 00:00:02,760
+那么你今天是如何去上班的呢？
 So how did you get to work today?
 
 2
 00:00:02,760 --> 00:00:04,190
+我有一辆自行车  挺不错的
 &gt;&gt; I have a bike, works out just fine.
 
 3
 00:00:04,190 --> 00:00:05,280
+你呢？
 How about you?
 
 4
 00:00:05,280 --> 00:00:06,440
+好吧  我开车去的
 &gt;&gt; Okay. I drive.
 
 5
 00:00:06,440 --> 00:00:08,020
+酷！  你的车怎么样？
 &gt;&gt; Oh cool, how's that car working out?
 
 6
 00:00:08,020 --> 00:00:08,600
+挺不错的
 &gt;&gt; It's good.
 
 7
 00:00:08,600 --> 00:00:09,870
+是吗  那你知道它是如何工作的吗
 &gt;&gt; Yeah? Do you know how it works,
 
 8
 00:00:09,870 --> 00:00:11,840
+引擎盖下的秘密是什么呢？
 underneath the hood?
 
 9
 00:00:11,840 --> 00:00:13,090
+不  我不需要知道
 &gt;&gt; No, I don't need to.
 
 10
 00:00:13,090 --> 00:00:15,630
+我只需要插入钥匙  然后直接启动就行
 I just need to put the key in, and then I drive it.
 
 11
 00:00:15,630 --> 00:00:18,040
+你知道  这就好像写代码一样
 You know, this is kind of like writing code.
 
 12
 00:00:18,040 --> 00:00:18,860
+哪些方面像呢？
 &gt;&gt; In what way?
 
 13
 00:00:18,860 --> 00:00:21,220
+嗯。。。  其实都很像写代码
 &gt;&gt; Well, everything is kind of like writing code.
 
 14
 00:00:21,220 --> 00:00:22,330
+对的  别走神  听我好好解释
 &gt;&gt; Okay, yeah. &gt;&gt; Stick with me for a second.
 
 15
 00:00:22,330 --> 00:00:24,740
+在之前的课程里  我们给学生们一大堆代码
 In previous lessons we gave students a bunch of code.
 
 16
 00:00:24,740 --> 00:00:26,670
+我们为他们提供了一些调用方法  比如显示方法
 &gt;&gt; Yeah. We gave them methods like the display
 
 17
 00:00:26,670 --> 00:00:28,160
+显示价格方法
 method and the display price method.
 
 18
 00:00:28,160 --> 00:00:28,940
+对的  而且我们一直在说
 &gt;&gt; Right. And we kept saying,
 
 19
 00:00:28,940 --> 00:00:30,200
+别担心这个
 well, don't worry about this.
 
 20
 00:00:30,200 --> 00:00:31,720
+我们以后会详细解释它们的功能
 We'll talk about what it does later.
 
 21
 00:00:31,720 --> 00:00:33,290
+所谓的"以后"就是现在
 Well that later is now.
 
 22
 00:00:33,290 --> 00:00:34,120
+好吧好吧
 &gt;&gt; Okay. &gt;&gt; Okay.
 
 23
 00:00:34,120 --> 00:00:36,520
+正如你知道汽车是如何工作的一样
 So much like you know how a car works.
 
 24
 00:00:36,520 --> 00:00:37,560
+你可以使用这些方法
 You can use it.
 
 25
 00:00:37,560 --> 00:00:39,510
+学生们可以利用这些方法
 Students were able to use that method.
 
 26
 00:00:39,510 --> 00:00:40,035
+是吗？
 &gt;&gt; Okay. &gt;&gt; Right?
 
 27
 00:00:40,035 --> 00:00:41,845
+但是我们设计了这个方法  所以这里
 But we wrote the method, so we were
 
 28
 00:00:41,845 --> 00:00:43,800
+我们就相当于汽车的设计师  我明白了
 the designers of the car in that case. &gt;&gt; I see.
 
 29
 00:00:43,800 --> 00:00:46,380
+所以主题思想就是你可以在其他地方定义方法
 So the main idea is that you can define the method somewhere.
 
 30
 00:00:46,380 --> 00:00:48,090
+就好像造车一样
 &gt;&gt; So that's like building the car.
 
 31
 00:00:48,090 --> 00:00:49,590
+然后在后面你可以调用那个方法
 &gt;&gt; And then later you can call that method.
 
 32
 00:00:49,590 --> 00:00:51,100
+相当于开车
 &gt;&gt; That's like driving the car.
 
 33
 00:00:51,100 --> 00:00:51,860
+对
 &gt;&gt; Yeah.
 
 34
 00:00:51,860 --> 00:00:53,200
+后面我们还要用到这个思想
 &gt;&gt; So let's use those ideas next.
 
 35
 00:00:53,200 --> 00:00:54,500
+听起来不错
 &gt;&gt; Sounds good.
 
 36
 00:00:54,500 --> 00:00:56,506
+在MainActivity.java文件里
 &gt;&gt; Within the MainActivity.java file,
 
 37
 00:00:56,506 --> 00:00:59,540
+display 方法就在这定义
 this is where the display method is defined.
 
 38
 00:00:59,540 --> 00:01:02,956
+这里是它被调用的地方  在increment方法里
 And this is where it's getting called, within the increment method and
 
 39
 00:01:02,956 --> 00:01:04,769
+和decrement方法
 within the decrement method.
 
 40
 00:01:04,769 --> 00:01:08,640
+display方法的实现体接受一个数字的参数
 The instructions of the display method take in a number and
 
 41
 00:01:08,640 --> 00:01:10,550
+然后在屏幕显示
 then display it on the screen.
 
 42
 00:01:10,550 --> 00:01:11,730
+就像这里一样
 Like this right here.
 
 43
 00:01:11,730 --> 00:01:16,360
+我们可以将它的实现体拷贝到调用该方法的地方
 Instead of defining a method we can also just take the instructions inside of it
 
 44
 00:01:16,360 --> 00:01:21,300
+而不是重新定义一个新的方法
 by copying it and then pasting it where we called that method.
 
 45
 00:01:21,300 --> 00:01:25,580
+由于数字在这里不是变量  我们将仅仅改变它的数量
 And since number is not a variable here, we're going to change it to quantity.
 
 46
 00:01:25,580 --> 00:01:26,550
+如果我们想要实现increment方法
 If we want to do the same for
 
 47
 00:01:26,550 --> 00:01:30,940
+一样的功能  可以将代码拷贝到这里
 the increment method, we'd copy this code and then paste it up here.
 
 48
 00:01:30,940 --> 00:01:33,740
+这段代码和我们之前那段的功能一样
 So this code works the same as we had before, but
 
 49
 00:01:33,740 --> 00:01:35,950
+现在我们不需要display方法
 now we don't need the display method.
 
 50
 00:01:35,950 --> 00:01:40,060
+不过这样的实现方法的弊端是我们在两个方法里出现了
 The disadvantage to this implementation is that we have duplicate code
 
 51
 00:01:40,060 --> 00:01:41,150
+冗余的代码
 in both methods.
 
 52
 00:01:41,150 --> 00:01:46,170
+相反  如果我们定义display方法  然后以这个名字调用它
 Instead, if we define the display method and then we just call it by its name,
 
 53
 00:01:46,170 --> 00:01:49,500
+然后我们就可以精简代码  这对程序是好的
 then we can have less code which is better for the app.
 
 54
 00:01:49,500 --> 00:01:51,670
+我还要给大家展示一下其它很酷的东西
 I also want to show you something else that's cool.
 
 55
 00:01:51,670 --> 00:01:55,540
+每当你看到一个方法  你可以点一下然后再右键点一下
 Anytime you see a method, you can click on it and then right click.
 
 56
 00:01:55,540 --> 00:02:00,610
+然后转向"声明"  如果用的是Mac  可以使用Command + V快捷键
 And then go to declaration, or Command + V if you're on a Mac.
 
 57
 00:02:00,610 --> 00:02:04,100
+这样会转向我们定义函数方法的地方
 This scrolls the file to where the method is defined.
 
 58
 00:02:04,100 --> 00:02:07,650
+这个很有用  通过它你可以看到函数方法的
 This is useful because then you can see the actual instructions that
 
 59
 00:02:07,650 --> 00:02:09,490
+实现体
 are contained within that method.
 
 60
 00:02:09,490 --> 00:02:10,300
+对于其它方法
 For other methods,
 
 61
 00:02:10,300 --> 00:02:14,480
+它会打开Android框架代码
 it may open up a declaration in the Android framework code.
 
 62
 00:02:14,480 --> 00:02:18,940
+这些是Android团队写的  比如TextView.java文件
 This was written by the Android team, the TextView.java file.
 
 63
 00:02:18,940 --> 00:02:22,200
+虽然这看起来十分神奇
 This shows that, even though things may look like magic,
 
 64
 00:02:22,200 --> 00:02:26,150
+你可以随时转向该函数方法的代码实现
 you can always trace it back to the lines of code where it was defined.
 
 65
 00:02:26,150 --> 00:02:29,970
+不管是你还是Android团队
 Either by you or by someone on the Android team.
 
 66
 00:02:29,970 --> 00:02:33,150
+为了帮助大家理解方法定义和方法调用之间的区别
 To help you understand the difference between defining versus calling
 
 67
 00:02:33,150 --> 00:02:35,930
+我们来改改MainActivity
 a method, let's modify the main activity.
 
 68
 00:02:35,930 --> 00:02:38,960
+这里我们要改变函数方法定义的方法  将方法的名字从display
 We're going to change the way a method is defined by changing the name of
 
 69
 00:02:38,960 --> 00:02:42,585
+改为displayQuantity
 the display method to the name displayQuantity.
 
 70
 00:02:42,585 --> 00:02:47,450
+对于函数方法的调用  我们需要改变那些代码呢？
 Then for calling this method, do we need to change anything about that code?
 
 71
 00:02:47,450 --> 00:02:51,710
+如果这些改变造成了程序的错误  确保能够定位到错误
 If these changes cause an error in your app, make sure to address that so
 
 72
 00:02:51,710 --> 00:02:53,770
+然后再在设备上重新运行一遍
 that you can run the app on your phone again.
 
 73
 00:02:53,770 --> 00:02:53,775
+完成后在方格里打勾
 Check these boxes when you're done.
 
