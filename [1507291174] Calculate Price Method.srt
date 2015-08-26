@@ -1,73 +1,91 @@
 1
 00:00:00,210 --> 00:00:04,370
+之前  我们看到可以向display方法传递一个整形参数
 Earlier, we saw that we could pass a number into the display method.
 
 2
 00:00:04,370 --> 00:00:08,350
+接下来我们进一步聊聊方法的输入和输出的不同
 Let's talk more about the different inputs and output of a method.
 
 3
 00:00:08,350 --> 00:00:12,510
+我们来看一下MainActivity里的submitOrder方法
 Let's look at the submitOrder method in the MainActivity as an example.
 
 4
 00:00:12,510 --> 00:00:15,000
+比如在这个方法中你有一堆代码
 Say you have a bunch of lines of code in that method.
 
 5
 00:00:15,000 --> 00:00:16,670
+当用户点击Order按钮的时候
 When the user clicks on the Order button,
 
 6
 00:00:16,670 --> 00:00:19,330
+按钮会触发这个submitOrder方法
 it will trigger this submitOrder method to be called.
 
 7
 00:00:19,330 --> 00:00:23,200
+Android设备会将这些指令从头到尾运行一遍
 The Android device will execute each of these instructions from top to bottom,
 
 8
 00:00:23,200 --> 00:00:26,980
+当它调用calculatePrice方法时  它会
 and when it hits the calculatePrice method call it will
 
 9
 00:00:26,980 --> 00:00:30,400
+跳到calculatePrice方法被定义的地方
 jump over to where the calculatePrice method is defined.
 
 10
 00:00:30,400 --> 00:00:33,830
+比如这个方法被定义在MainActivity文件的结尾
 Say that this is defined at the bottom of the MainActivity file.
 
 11
 00:00:33,830 --> 00:00:37,020
+Android设备会从头到尾运行每一句指令
 The Android device will execute each of these instructions from top to bottom of
 
 12
 00:00:37,020 --> 00:00:41,270
+然后它会自动跳回submitOrder方法
 the method, and then it will jump back to the submitOrder method.
 
 13
 00:00:41,270 --> 00:00:44,340
+然后  它会继续运行指令直到
 Then, it will continue executing these instructions until it hits the end
 
 14
 00:00:44,340 --> 00:00:45,268
+方法的结尾
 of the method.
 
 15
 00:00:45,268 --> 00:00:47,240
+当calculatePrice方法被调用的时候
 When the calculatePrice method is called,
 
 16
 00:00:47,240 --> 00:00:49,510
+我们可以传递一堆输入参数
 we can pass a bunch of inputs over so
 
 17
 00:00:49,510 --> 00:00:53,620
+这样当我们运行这些代码的时候  我们可以使用这些输入数据
 that when we're executing these lines of code, we can use these input values.
 
 18
 00:00:53,620 --> 00:00:55,070
+
 As a result of this method,
 
 19
