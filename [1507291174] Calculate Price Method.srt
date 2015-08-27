@@ -85,202 +85,251 @@ that when we're executing these lines of code, we can use these input values.
 
 18
 00:00:53,620 --> 00:00:55,070
-
+这个方法调用的最终结果是
 As a result of this method,
 
 19
 00:00:55,070 --> 00:00:58,940
+我们可以返回一个输出值
 we can pass a single output value back to the caller.
 
 20
 00:00:58,940 --> 00:01:03,030
+这样输出值可以用于接下来的代码中
 That way, the output value can be used in the subsequent lines of code.
 
 21
 00:01:03,030 --> 00:01:07,090
+在Java中  我们将输入叫做方法输入参数
 In Java, we call the inputs to a method input parameters, and
 
 22
 00:01:07,090 --> 00:01:10,550
+我们可以没有或者有多个输入参数
 we can have zero or more input parameters.
 
 23
 00:01:10,550 --> 00:01:13,370
+在Java中  我们将输出叫做返回值
 In Java, we call the output a return value,
 
 24
 00:01:13,370 --> 00:01:16,470
+我们可以有零个或者一个返回值
 and we can have zero or one return value.
 
 25
 00:01:16,470 --> 00:01:20,420
+举个例子  calculatePrice方法可以接受一个
 An example of an input parameter is passing the quantity
 
 26
 00:01:20,420 --> 00:01:22,840
+输入参数
 over to the calculatePrice method.
 
 27
 00:01:22,840 --> 00:01:26,957
+这个方法可以利用这个值计算整个订单的
 That way, this method can use the quantity to figure out the total price
 
 28
 00:01:26,957 --> 00:01:28,130
+最终价格
 of the whole order.
 
 29
 00:01:28,130 --> 00:01:31,350
+然后我们可以将最终的价格作为返回值返回
 Then, we can pass that total price back as a return value.
 
 30
 00:01:31,350 --> 00:01:34,046
+然后在下面这个submitOrder方法
 And then in the submitOrder method, down here,
 
 31
 00:01:34,046 --> 00:01:38,253
+我们可以用这个最终价格来做其他的事  比如在屏幕上显示
 we can use this total price to do other things, like display it onscreen, or
 
 32
 00:01:38,253 --> 00:01:40,930
+或者创建订单等等
 create receipt, or anything like that.
 
 33
 00:01:40,930 --> 00:01:43,730
+总结一下  这里是我们定义calculatePrice方法的地方
 So to summarize, this is where we define the calculatePrice method, and
 
 34
 00:01:43,730 --> 00:01:45,400
+这里是我们调用它的地方
 this is where we call it.
 
 35
 00:01:45,400 --> 00:01:49,490
+我们想要创建一个方法能够计算咖啡的价格
 We want to create a method to calculate the price of a coffee order.
 
 36
 00:01:49,490 --> 00:01:53,410
+目前  我们在submitOrder方法里直接计算价格
 Currently, we calculate the price directly in the submitOrder method, but
 
 37
 00:01:53,410 --> 00:01:57,020
+但是计算价格的逻辑未来会有一点复杂
 the logic to calculate the price is going to get a little more complicated.
 
 38
 00:01:57,020 --> 00:01:59,030
+所以我们需要单独的方法来做这件事
 So let's move it into its own method.
 
 39
 00:01:59,030 --> 00:02:01,948
+有了单独的方法  我们就不需要到处重复拷贝和粘贴
 Then we can call it as many times as we want without copying and
 
 40
 00:02:01,948 --> 00:02:04,080
+代码了
 pasting the code everywhere.
 
 41
 00:02:04,080 --> 00:02:07,730
+随着大家Android开发经验的增加  你就能更加准确的判断
 As you gain more experience in Android development, you'll gain better judgment
 
 42
 00:02:07,730 --> 00:02:11,850
+什么时候需要创建新的方法或者什么时候不需要
 on when to create a new method for something or when you don't need to.
 
 43
 00:02:11,850 --> 00:02:14,690
+不过这需要更多的经验和时间的积累
 This will just come with more experience and more time.
 
 44
 00:02:14,690 --> 00:02:17,640
+那么我们来创建我们在MainActivity里的
 So, this is the first time we're going to be creating
 
 45
 00:02:17,640 --> 00:02:20,800
+第一个新的方法吧
 a new method in the MainActivity on our own.
 
 46
 00:02:20,800 --> 00:02:24,575
+为了避免我们写的不规范  大家先来
 Instead of starting by writing it from scratch, we want to start by learning to
 
 47
 00:02:24,575 --> 00:02:28,460
+看一些代码片段来学习一下什么是正确的方法
 recognize what is a correct method by reading some code snippets.
 
 48
 00:02:28,460 --> 00:02:31,700
+在指导大纲里  我们给了大家三个选项
 So in the instructor notes, we're going to provide you three options.
 
 49
 00:02:31,700 --> 00:02:35,830
+阅读一下这三段代码  看看哪一段正确
 Read over these three code snippets and determine which
 
 50
 00:02:35,830 --> 00:02:40,330
+实现了计算订单的价格
 option correctly implements the method to calculate the price of the order.
 
 51
 00:02:40,330 --> 00:02:42,330
+当你点击指导大纲的链接的时候
 When you click on the link in the instructor notes,
 
 52
 00:02:42,330 --> 00:02:48,380
+你就能看到对应A、B、C选项的代码片段
 you'll see this just has code for options A, B, and C.
 
 53
 00:02:48,380 --> 00:02:49,290
+这里这样做的目的就是
 The goal here is for
 
 54
 00:02:49,290 --> 00:02:53,360
+为了帮助没看过代码的大家快速适应代码阅读
 you to become comfortable with reading code that you've never seen before.
 
 55
 00:02:53,360 --> 00:02:57,370
+我们之前还没有详细介绍过创建可用方法的规则
 We haven't gone over the exact rules for what makes a valid method, but
 
 56
 00:02:57,370 --> 00:03:02,630
+但是我希望大家能够尽量猜一下你认为最正确的选项
 I want you to make your best guess on which option you think is most correct.
 
 57
 00:03:02,630 --> 00:03:05,091
+我也鼓励大家用Google搜索一下
 I also encourage you to Google search for
 
 58
 00:03:05,091 --> 00:03:09,140
+看看如何定义一个Java方法
 more information on how to define Java methods.
 
 59
 00:03:09,140 --> 00:03:11,450
+随着你不断阅读搜索到的结果
 As you click through the different search results,
 
 60
 00:03:11,450 --> 00:03:15,100
+开发文档里你不懂的部分也会慢慢的明白
 you'll come across information in the documentation that you don't understand.
 
 61
 00:03:15,100 --> 00:03:18,290
+如果大家不能完全理解页面上的所有内容也请不要着急
 But I want you to become comfortable with not understanding everything on
 
 62
 00:03:18,290 --> 00:03:21,950
+因为这很正常  一般人都无法完全理解所有的内容
 those pages, because it's perfectly normal to not understand everything.
 
 63
 00:03:21,950 --> 00:03:25,780
+大家需要做的就是快速浏览一下文章  找到你理解的和
 All you need to do is just skim the articles for what you understand and
 
 64
 00:03:25,780 --> 00:03:29,140
+你觉得和问题相关的部分即可
 what you think is relevant to the problem at hand.
 
 65
 00:03:29,140 --> 00:03:30,610
+那么开始读代码吧
 So, go ahead and read the code for
 
 66
 00:03:30,610 --> 00:03:34,260
+上网搜一搜相关的内容  
 these three options, look up some information online, and then make your
 
 67
 00:03:34,260 --> 00:03:34,265
+然后尽量猜猜如何正确定义calculatePrice方法
 best guest on how to correctly define the calculatePrice method.
 
